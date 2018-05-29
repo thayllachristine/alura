@@ -1,0 +1,31 @@
+Comandos Git 
+
+cd abrir pastas
+cd .. voltar para pasta anterior
+cd -- abrir main
+ls verificar arquivos e pastas
+git ls-files
+
+mkdir curso-git
+git tag quantidade de vers�es
+git status
+git add index.html
+git commit -m ""
+
+�or create a new repository on the command line
+echo "# another" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/x.git
+git push -u origin master
+
+para projetos remotos
+git push
+git pull 
+git clone
+
+q sair do hist�rico 
+
+git whatchanged -p visualizar linhas que foram modificadas em cada commit do nosso projeto
+git log -p imprime os commits nos quais n�o houve modifica��o
