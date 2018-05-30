@@ -1,4 +1,4 @@
-Comandos Git 
+﻿Comandos Git 
 
 cd abrir pastas
 cd .. voltar para pasta anterior
@@ -7,12 +7,12 @@ ls verificar arquivos e pastas
 git ls-files
 
 mkdir curso-git
-git tag quantidade de vers�es
+git tag quantidade de versoes
 git status
 git add index.html
 git commit -m ""
 
-�or create a new repository on the command line
+for create a new repository on the command line
 echo "# another" >> README.md
 git init
 git add README.md
@@ -25,7 +25,7 @@ git push
 git pull 
 git clone
 
-q sair do hist�rico 
+q sair do historico 
 
 git whatchanged -p visualizar linhas que foram modificadas em cada commit do nosso projeto
-git log -p imprime os commits nos quais n�o houve modifica��o
+git log -p imprime os commits nos quais nao houve modificacao
