@@ -8,4 +8,3 @@ Exercício Rebase - Aula 6
 6 Execute o comando git rebase master para aplicar os commits de lá que faltam na branch testeRebase
 7 Dê uma olhada na saída do comando git log e repare que os commits que criou na master estão listados, mas não estão por último
 
-------
