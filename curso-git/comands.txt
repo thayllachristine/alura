@@ -81,4 +81,3 @@ git push
 
 (no branch)  apenas temporária, criada pelo Git para que possamos resolver o conflito.
 -----
-
