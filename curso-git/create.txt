@@ -1,0 +1,7 @@
+for create a new repository on the command line
+echo "# another" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/x.git
+git push -u origin master cria ligação entre branch remota e local
