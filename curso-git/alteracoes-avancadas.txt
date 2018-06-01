@@ -1,0 +1,11 @@
+Aula 7 - Controle avançado de alterações 
+
+- Descartando alterações no Working Directory: git checkout
+quando dois usuários estão realizando alterações num mesmo arquivo e em branches diferentes, é recomendável que sempre utilize o comando git pull para verificar as alterações no arquivo 
+caso tenha, é preciso copiar o arquivo para a branch local através do git check master nomeArquivo.ext
+nesse command, ele trará o arquivo que se encontra na branch master e add a sua branch local
+
+- Descartando alterações no Index: git reset
+para redefinir um arquivo com alterações antigas, basta utilizar o comando git reset HEAD nomeArquivo.ext
+
+- Guardando alterações para mais tarde: git stash
