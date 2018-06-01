@@ -1,4 +1,4 @@
-Exercício Rebase - Aula 6
+Aula 6 - Exercício Rebase 
 
 1 - Da branch master, utilize o comando git checkout -b testeRebase para criar e se mover para uma nova branch
 2 -  Altere alguns arquivos, crie um ou dois commits nesta branch
