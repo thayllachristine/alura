@@ -9,3 +9,10 @@ nesse command, ele trará o arquivo que se encontra na branch master e add a sua 
 para redefinir um arquivo com alterações antigas, basta utilizar o comando git reset HEAD nomeArquivo.ext
 
 - Guardando alterações para mais tarde: git stash
+exemplo: um usuário já havia commitado uma alteração enquanto já estava realizando uma outra, mas notou que a anterior tinha um bug em uma das tags. com isso, ele resolveu guardar as alterações atuais e voltar na anterior para corrigir o bug, então usou o comand git stash, que guarda as alterações numa área especial. então, o user soluciona o bug através de um commit e retorna a tarefa que estava executando com git stash pop
+git stash 
+git stash pop utiliza como padrão o último stash criado
+git stash : lista todos os stashes salvos, cada um é nomeado da seguinte maneira "WIP on nomeBranch: [hash] [mensagem_do_commit_head]"
+stash@{0} : último stash criado, podendo ter mais números ex stash@{1} 
+
+Descartando commits indesejados
