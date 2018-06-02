@@ -1,0 +1,39 @@
+Aula 7 - Controle avançado de alterações 
+
+- Descartando alterações no Working Directory: git checkout
+quando dois usuários estão realizando alterações num mesmo arquivo e em branches diferentes, é recomendável que sempre utilize o comando git pull para verificar as alterações no arquivo 
+caso tenha, é preciso copiar o arquivo para a branch local através do git check master nomeArquivo.ext
+nesse command, ele trará o arquivo que se encontra na branch master e add a sua branch local
+
+- Descartando alterações no Index: git reset
+para redefinir um arquivo com alterações antigas, basta utilizar o comando git reset HEAD nomeArquivo.ext
+
+- Guardando alterações para mais tarde: git stash
+exemplo: um usuário já havia commitado uma alteração enquanto já estava realizando uma outra, mas notou que a anterior tinha um bug em uma das tags. com isso, ele resolveu guardar as alterações atuais e voltar na anterior para corrigir o bug, então usou o comand git stash, que guarda as alterações numa área especial. então, o user soluciona o bug através de um commit e retorna a tarefa que estava executando com git stash pop
+git stash 
+git stash pop utiliza como padrão o último stash criado
+git stash : lista todos os stashes salvos, cada um é nomeado da seguinte maneira "WIP on nomeBranch: [hash] [mensagem_do_commit_head]"
+stash@{0} : último stash criado, podendo ter mais números ex stash@{1} 
+
+- Descartando commits indesejados
+o que é hash? é o id do commit (sequência de caracteres localizada à direita da palavra commit)
+quando um user realiza uma alteração, já realizou o commit e gostaria de descartá-la ou desfazê-la, ele utiliza o comando git reset hash, mas para isso ele precisa saber através do log qual hash ele gostaria de usar como referencia, pois não se pode usar o HEAD atual do WD (Working Directory/Index). com isso, o ultimo commit será descartado e direcionará para o head para o penultimo commit.
+git reset hash
+
+obs: o comando git reset só é recomendado quando desejamos desfazer poucos commits e, principalmente, se esses ainda não tiverem sido enviados a um repositório remoto. pois todos os commits que foram realizados após ele serão descartados, perdendo todas as novas funcionalidades.
+
+- Desfazendo commits antigos
+quando deseja remover commit que foi realizado há um tempo, a melhor maneira é revertendo-o, ou seja, apenas desfazer a alteração daquele commit. todos os outros commits serão mantidos em seu respectivo rep. para isso é utilizado o comando git revert hash, onde um novo commit será realizado para reverter as alterações do commit escolhido.
+git revert hash
+git revert -n [hash_do_commit] alterações sejam revertidas e adicionadas ao nosso Working Directory e Index
+
+- Buscando por bugs em muitos commits
+ex: um bug foi detectado e o sistema estava funcionando numa segunda, então é preciso ver no log os commits que foram dados na segunda e notas em qual deles está o bug pelo comando git bisect 
+git log : verificar o hash do commit com a possível solução do bug
+git bisect start : inicia sessão bisect
+git bisect bad HEAD : indicamos que ele contém o bug o qual queremos encontrar o momento em que foi introduzido
+git bisect good hash
+
+agora que o Git sabe qual commit funciona e qual não funciona, ele automaticamente faz o checkout de um commit intermediário para que possamos verificar se funciona e aí marcamos o commit atual como bad (automaticamente os posteriores tbm sao ruins)
+
+Apesar de fazer checkout dos commits, o ciclo de bisect trabalha em uma branch exclusiva no repositório local. Portanto, para corrigir o erro, conhecemos o hash do commit e podemos utilizar os comandos git reset, git revert ou ver as alterações realizadas naquele commit específico com git show hash e decidir a melhor maneira de corrigir.
