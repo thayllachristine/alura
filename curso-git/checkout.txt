@@ -1,0 +1,9 @@
+Checkout - branch e arquivo com o mesmo nome
+
+Serve tanto para trocar de branch quanto descartar alterações de um arquivo do working directory. Mas se possuímos um arquivo e uma branch com o mesmo nome, o Git trata como padrão considerar que o usuário quer mudar de branch. Precisamos então de uma alternativa para diferenciar a branch do arquivo.
+
+Para isso existe uma notação no comando git checkout, que indica que daqui pra frente só serão listados arquivos. Digamos que temos as branches design e master (e estamos na master) e o arquivo design que na master contém alterações. Para garantir que vamos restaurar o arquivo, precisamos usar o seguinte comando:
+
+git checkout -- design
+
+Essa notação de dois hífens -- indica que os parâmetros seguintes serão todos nomes de arquivos, permitindo que restauremos o arquivo design ao estado original.
