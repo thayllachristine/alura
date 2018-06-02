@@ -1,6 +1,7 @@
 ﻿Comandos Git 
 
 ":wq" sair do commit 
+git push repositorio :branch [deleta branch]
 
 cd abrir pastas
 cd .. voltar para pasta anterior
