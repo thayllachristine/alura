@@ -1,3 +1,5 @@
+Arquivo sobre branches
+
 git branch verificar branches existentes
 git branch novabranch criar nova branch
 git checkout novabranch utilizar nova branch
