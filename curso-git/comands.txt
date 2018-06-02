@@ -1,5 +1,7 @@
 ﻿Comandos Git 
 
+":wq" sair do commit 
+
 cd abrir pastas
 cd .. voltar para pasta anterior
 cd -- abrir main
@@ -43,7 +45,7 @@ git branch -r lista somente branches remotas
 git branch -u  cria uma referencia entre uma branch local e uma branch remota após a criação da branch local
 git checkout -t repositorio/novabranch cria branch local 	com mesmo nome da remota, muda para branch criada e cria relação entre local e remota
 git push -d reposito branchcriada remove branch remota
-git fetch repositorio rifica todas as atualizações que foram realizadas no repositorio 
+git fetch repositorio verifica todas as atualizações que foram realizadas no repositorio 
 
 merge : mesclar
 
@@ -81,3 +83,57 @@ git push
 
 (no branch)  apenas temporária, criada pelo Git para que possamos resolver o conflito.
 ------------
+
+rebase 
+--continue deve ser utilizado após a resolução manual de conflitos
+--skip faz com que suas alterações sejam descartadas
+--abort volta atrás em todo o processo de rebase
+
+----------
+
+voltar para o estado do ultimo commit do rep
+git check nomeArquivo 
+
+com estado de index (que é quando o arq já foi add)
+voltar para o estado antes de ser comitado (add ao rep)
+git reset HEAD nomeArquivo
+git check out nomeArquivo
+
+quando é commitado (add + commit)
+todo commit tem id 
+git reset idCommit (desfaz commit)
+
+desfazer alterações de um commit x antigo
+git revert idCommit 
+
+guardar em lugar temporario : stash 
+guardar alterações que não foram commitadas
+
+git stash list : mostram os commits que foram "guardados" no stash
+
+git stash pop: 
+git stash aply idStash
+git statsh drop: 'jogar fora' aquela alteração temporária
+
+procurar commits que eu quero desfazer numa determinada seção
+
+bisect
+git bisect start
+git bisect bad x
+git bisect good id
+
+==
+Descartando alterações no Working Directory: git checkout
+git diff :  verificar alterações realizadas
+
+descartar alterações no 'working directory' de um determinado arquivo
+git checkout nomeArquivo.Extensao
+
+quando dois usuários estão realizando alterações num mesmo arquivo e em branches diferentes, é recomendável que sempre utilize o comando git pull para verificar as alterações no arquivo 
+caso tenha, é preciso copiar o arquivo para a branch local através do git check master nomeArquivo.ext
+nesse command, ele trará o arquivo que se encontra na branch master e add a sua branch local
+
+Descartando alterações no Index: git reset
+para redefinir um arquivo com alterações antigas, basta utilizar o comando git reset HEAD nomeArquivo.ext
+
+Guardando alterações para mais tarde: git stash
