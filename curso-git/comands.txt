@@ -138,3 +138,12 @@ Descartando alterações no Index: git reset
 para redefinir um arquivo com alterações antigas, basta utilizar o comando git reset HEAD nomeArquivo.ext
 
 Guardando alterações para mais tarde: git stash
+--
+Ao digitarmos HEAD~ seguido de um número inteiro n, será feita uma referência ao n-ésimo commit anterior ao HEAD. Por exemplo, HEAD~1, faz referência ao penúltimo commit e HEAD~2, ao antepenúltimo. No caso específico do penúltimo commit, também pode-se referenciá-lo utilizando o atalho HEAD^.
+-
+Usando a opção apply, recuperamos as últimas alterações da pilha sem removê-las.
+
+-
+Este comando faz com que o último estado salvo seja apagado. Também podemos utilizar o nome de cada elemento do stash para remover algum estado que não seja o último. Por fim, se quisermos excluir todos os estados, podemos utilizar o comando git stash clear.
+
+-
