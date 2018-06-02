@@ -16,3 +16,6 @@ git stash : lista todos os stashes salvos, cada um é nomeado da seguinte maneira
 stash@{0} : último stash criado, podendo ter mais números ex stash@{1} 
 
 Descartando commits indesejados
+
+
+____
