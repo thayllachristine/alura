@@ -147,3 +147,15 @@ Usando a opção apply, recuperamos as últimas alterações da pilha sem remov�
 Este comando faz com que o último estado salvo seja apagado. Também podemos utilizar o nome de cada elemento do stash para remover algum estado que não seja o último. Por fim, se quisermos excluir todos os estados, podemos utilizar o comando git stash clear.
 
 -
+~~~~~~~~~~~~~~~~~~~~~~~~
+Aula 8 - Contribuição com opensource, técnicas avançadas e produtividade com o Git
+
+aliases : criar novos comandos no git para facilitar 
+
+vim diretorio do user local
+
+vim ~/.gitconfig 
+
+log visualizar alt
+alias encurtar cmd
+diff
