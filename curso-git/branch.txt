@@ -1,0 +1,16 @@
+Arquivo sobre branches
+
+git branch verificar branches existentes
+git branch novabranch criar nova branch
+git checkout novabranch utilizar nova branch
+git push repositorio novabranch criar nova branch no repositorio remoto
+git branch -t novabranch respositorio/novabranch referencia entre uma branch local e uma branch remota na hora de criar a nova branch local 
+git branch -a todas as branches sao apresentadas (locais e remotos)
+git branch novabranch -b criar nova branch e acessar branch criada
+git branch -d deletar branch
+git branch -D forçar delete
+git branch -r lista somente branches remotas
+git branch -u  cria uma referencia entre uma branch local e uma branch remota após a criação da branch local
+git checkout -t repositorio/novabranch cria branch local 	com mesmo nome da remota, muda para branch criada e cria relação entre local e remota
+git push -d reposito branchcriada remove branch remota
+git fetch repositorio rifica todas as atualizações que foram realizadas no repositorio 
