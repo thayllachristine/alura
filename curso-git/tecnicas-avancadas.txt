@@ -1,0 +1,65 @@
+Aula 8 - Contribuição com opensource, técnicas avançadas e produtividade com o Git
+
+git clone : baixar repositório remoto para local
+
+fork : é quando uma pessoa não pode contribuir num projeto por causa de permissão e cria uma copia local do projeto.
+
+pull request :  pedir para que os responsáveis pelo projeto original utilizem nossos commits em seus projetos [criado na interface do github]
+
+o projeto original vai continuar recebendo novos commits e pushes, que não estarão em nosso fork, pois os dois repositórios não possuem relação alguma.
+por isso, é necessário add um novo rep remoto que aponta para o proj original
+
+git remote nomeRep enderecoRepositorioRemoto
+git fech nomeRep : verficar se há alterações no rep e realiza download das mesmas, mas não as aplica, pois é necessário fazer isso atraves do git merge que estao na branch master
+
+git merge nomeRep/master
+
+- Como aplicar o pull request
+ao receber um pull request, os users selecionados serão notificados, então o código é avaliado e pode ser aceito ou negado
+smp que um pull req é criado, uma url é atribuida a ele: 
+https://github.com/[dono_do_projeto]/[projeto]/pull/[id_do_pull_request]
+
+diff do pull req 
+
+Uma vez que o pull request foi gerado, basta baixá-lo para o nosso projeto e realizarmos o git merge para trazer as alterações para uma branch nossa. Para isso, bastaria primeiro fazer o git remote add [alias_do_repositorio_remoto] [url_do_repositorio_remoto] e em seguida fazermos o git fetch e já temos todas as alterações baixadas em nosso pc 
+A seguir, basta realizar o git merge [alias_do_repositorio]/[branch] , que rará para a branch atual os commits existentes no repositório remoto. Por fim, temos que colocar os commits em nosso repositório remoto. Para isso, basta executar o git push e, com isso, introduzimos os commits do pull request de outro desenvolvedor ao nosso projeto.
+
+- Redução dos comandos com Alias
+ Git nos permite criar alias para os comandos. Um exemplo de alias simples, que é bastante utilizado no mercado ao trabalhar com o Git, é usar a abreviação st para o comando status
+
+Para criar os alias dos comandos, basta editar o arquivo .gitconfig existente na pasta do seu usuário, adicionando uma seção chamada [alias] contendo um conjunto de chave e valor onde a chave indica o nome do novo comando (o alias) e o valor indica o comando original que será executado. ex:
+[alias]
+st = status
+Outros alias comuns são br para branch, co para checkout e df para diff.
+
+vários comandos em um só: 
+Com isso, podemos criar um comando chamado envia que sincroniza nossa branch desenvolvimento com o repositório remoto, faz o rebase e o merge e depois realiza o push, ou seja, o fluxo comum de ser utilizado com o Git. ex: 
+[alias]
+  envia = git checkout master && git pull && git checkout desenvolvimento && git rebase master && git checkout master && git merge desenvolvimento && git push
+
+Os alias, por padrão, não suportam a execução de outros comandos, como estamos fazendo, porém, é algo possível de ser habilitado. Para isso, basta adicionar uma ! ao começo do comando
+
+- Adicionando cores na saída do console
+ Git permite que habilitemos cores para a visualização dos diffs. Para isso, basta editar o arquivo .gitconfig, adicionando a seção [color] no arquivo, com a entrada do comando, ex
+[color]
+diff = auto
+
+- Visualizações de Log
+É possível alterar a visualização de logs, para para termos na tela informações mais detalhadas ou apenas algumas informações que desejemos
+git log -p : exibir no log de commits as alterações que foram feitas
+
+git log -stat : um resumo do commit, com a quantidade de linhas adicionadas e removidas
+
+Também é possível definir a quantidade de informações exibidas no log através de maneiras pré-definidas pelo próprio Git. Para isso, podemos utilizar a opção --pretty, onde precisamos passar um formato que será utilizado, podendo ser oneline, short, medium, full, fuller, email, raw ou então, caso nenhum atenda as necessidades, é possível criar sua própria formatação de log
+
+Note que, no oneline, não temos o nome da pessoa que realizou o commit. Podemos utilizar então nosso próprio formato para visualizar esse log mostrando também o nome do autor do commit e a data em que foi feita a alteração
+
+git log --pretty='%an realizou commit em %ad: %s'
+
+%an significa o nome do autor, %ad signfica a data e hora do commit e %s representa a mensagem de commit
+
+lista completa : git log --help
+
+--graph : que mostra um gráfico contendo a evolução do projeto e a criação e fechamento das branches. Podemos, inclusive, utilizá-la em conjunto com nossa formatação da saída, que utlizamos há pouco, executando o comando git log --pretty='%an realizou commit em %ad: %s' --graph
+
+watch : que te permite seguir um repositório e acompanhar seu progresso

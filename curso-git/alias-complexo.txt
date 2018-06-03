@@ -1,0 +1,12 @@
+Criação de um atalho chamado 'publica' para fazer o seguinte processos: 
+
+1. git checkout master: altera o local de trabalho para a branch master
+2. git pull: atualiza o histórico da branch master
+3. git checkout dev: altera o local de trabalho para a branch dev
+4. git rebase master: atualiza o HEAD da branch dev para receber as alterações da branch master
+5. git checkout master: altera o local de trabalho novamente para a branch master
+6. git merge dev: mescla as alterações da branch dev na master
+7. git push: envia suas alterações para o repositório remoto
+
+[alias]
+        publica = !git checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git push
