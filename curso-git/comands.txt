@@ -159,3 +159,6 @@ vim ~/.gitconfig
 log visualizar alt
 alias encurtar cmd
 diff
+
+~~~~~~~~~~~~~~~~~~~~~~~
+
