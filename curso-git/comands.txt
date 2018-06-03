@@ -162,3 +162,11 @@ diff
 
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+cherry pick 
+esse comando é utilizando quando você gostaria de inserir um commit especifico em sua branch master através do hash
+git cherry-pick hash
+
+-n ou --no-commit permite que recuperemos as alterações de um dado commit sem precisar inseri-lo no histórico local.
+
+Correto! Para pegar todos os commits dentro de um intervalo, devemos escrever o hash do commit mais antigo seguido por dois pontos sem espaço e seguido pelo hash do commit mais recente. Cuidado, é importante não haver espaços e que sejam exatamente dois pontos!
+
