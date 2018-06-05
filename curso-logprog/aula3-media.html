@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 2 - Retirada da instrução <br></title>
+</head>
+<body>
+    <script>
+        var ano = 2018;
+        
+        var nascFlavio = 1977;
+        var nascJoaquim = 1996;
+        var nascBarney = 1976;
+
+        var idadeFlavio;
+        var idadeJoaquim;
+        var idadeBarney;
+
+        idadeFlavio = ano - nascFlavio;
+        document.write("Flávio tem " + idadeFlavio + " anos. <br>");
+        
+        idadeJoaquim = ano - nascJoaquim;
+        document.write("Joaquim tem " + idadeJoaquim + " anos. <br>");
+
+        idadeBarney = ano - nascBarney;
+        document.write("Barney tem " + idadeBarney + " anos. <br>");
+        
+        var media;
+        media = ((idadeFlavio + idadeJoaquim + idadeBarney)/3);
+        document.write("A média das idades é: " + Math.round(media));
+
+    </script>
+</body>
+</html>
