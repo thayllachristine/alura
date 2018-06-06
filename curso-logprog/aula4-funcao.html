@@ -18,20 +18,29 @@
         var idadeJoaquim;
         var idadeBarney;
 
-        var puloLinha = "<br>";
+        function pulaLinha(){
+            document.write("<br>");
+        }
 
-        idadeFlavio = ano - nascFlavio;
-        document.write("Flávio tem " + idadeFlavio + " anos.");
-        document.write(puloLinha);
+        function mostraMensagem(mensagem){
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        mostraMensagem("Olá pessoal!");
         
+        idadeFlavio = ano - nascFlavio;
+        // document.write("Flávio tem " + idadeFlavio + " anos.");
+        mostraMensagem("Flávio tem " + idadeFlavio + " anos.");
+
         idadeJoaquim = ano - nascJoaquim;
-        document.write("Joaquim tem " + idadeJoaquim + " anos.");
-        document.write(puloLinha);
+        //document.write("Joaquim tem " + idadeJoaquim + " anos.");
+        mostraMensagem("Joaquim tem " + idadeJoaquim + " anos.");
 
         idadeBarney = ano - nascBarney;
-        document.write("Barney tem " + idadeBarney + " anos.");
-        document.write(puloLinha);
-        
+        // document.write("Barney tem " + idadeBarney + " anos.");
+        mostraMensagem("Barney tem " + idadeBarney + " anos.");
+   
         // var media;
         // media = ((idadeFlavio + idadeJoaquim + idadeBarney)/3);
         // document.write("A média das idades é: " + Math.round(media));
