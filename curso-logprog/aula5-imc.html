@@ -19,19 +19,19 @@
 
         function calculaIMC(peso, altura){
             var imc = peso / (altura * altura);
+            return imc;
         }
         
         var pesoThaylla = 60;
         var alturaThaylla = 1.57;
-        calculaIMC(pesoThaylla, alturaThaylla);
+        var imcThaylla = calculaIMC(pesoThaylla, alturaThaylla);
 
         var pesoAmigo = 68;
         var alturaAmigo = 1.72;
-        calculaIMC(pesoAmigo, alturaAmigo);
+        var imcAmigo = calculaIMC(pesoAmigo, alturaAmigo);
         
-
-        mostraMensagem("A IMC calculado é: " + imc);
-        
+        mostraMensagem("O meu IMC é: " + imcThaylla);
+        mostraMensagem("O IMC do meu amigo é: " + imcAmigo);
     </script>
 </body>
 </html>
