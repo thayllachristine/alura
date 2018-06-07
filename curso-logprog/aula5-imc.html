@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 5 - IMC</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+        
+        function mostraMensagem(mensagem){
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        function calculaIMC(peso, altura){
+            var imc = peso / (altura * altura);
+        }
+        
+        var pesoThaylla = 60;
+        var alturaThaylla = 1.57;
+        calculaIMC(pesoThaylla, alturaThaylla);
+
+        var pesoAmigo = 68;
+        var alturaAmigo = 1.72;
+        calculaIMC(pesoAmigo, alturaAmigo);
+        
+
+        mostraMensagem("A IMC calculado é: " + imc);
+        
+    </script>
+</body>
+</html>
