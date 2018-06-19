@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 5 - IMC Simplificado</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+        
+        function mostraMensagem(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        function calculaIMC(peso,altura) {
+            return imc = peso / (altura * altura);
+        }
+
+        var totalIMC = calculaIMC(57,1.57) + calculaIMC(60,1.50);
+
+        mostraMensagem("O total dos IMC's é: " + totalIMC);
+        mostraMensagem("AAA")
+    </script>
+</body>
+</html>

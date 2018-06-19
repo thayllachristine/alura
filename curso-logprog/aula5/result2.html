@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 5 - Resultado 2</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+    
+        function mostraMensagem(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        function a(texto) {
+            return "(" + texto + ")"; 
+        }
+
+        function b(texto){
+            return "@" + texto + "@";
+        }
+
+        function c(nome, sobrenome) {
+            return b(nome + " " + a(sobrenome));
+        }
+
+        var resultado = c("Thaylla","Christine");
+
+        mostraMensagem(resultado);
+    </script>
+</body>
+</html>

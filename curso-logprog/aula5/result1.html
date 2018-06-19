@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 5 - Resultado 1</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostraMensagem(mensagem){
+            document.write(mensagem);   
+            pulaLinha();
+        }
+
+        function a(num1,num2){
+            return num1 + num2;
+        }
+
+        function b(num1, num2){
+            return num1 / num2;
+        }
+
+        var resultado = a(10,20) + b(30,2);
+
+        mostraMensagem(resultado);
+    </script>
+</body>
+</html>
