@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 6 - Sorteia</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>")
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem)
+            pulaLinha()
+        }
+
+        function sorteia(num) {
+            var num = Math.round(Math.random() * num);
+            return num
+        }
+
+        let numPensado = sorteia(10);
+        let chute = parseInt(prompt("Informe um número: "));
+      
+        if(chute == numPensado){
+            mostraMensagem("Uau! Você acertou, pois eu pensei no " + numPensado)
+        } else if (chute > numPensado){
+            mostraMensagem("Você errou! Seu chute é maior que o número pensado!")
+        } else {
+            mostraMensagem("Você errou! Seu chute é menor que o número pensado!");
+        }
+
+    </script>
+</body>
+</html>

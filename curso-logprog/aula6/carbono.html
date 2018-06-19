@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 6 - Quantidade de Carbono</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write();
+        }
+    
+        function mostraMensagem(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        var qtdCarbono1 = parseInt(prompt("Quantidade de Carbono no 1º elemento: "));
+        var qtdCarbono2 = parseInt(prompt("Quantidade de Carbono no 2º elemento: "));
+        
+        qtdCarbono2 = qtdCarbono2 + 2;
+
+        if (qtdCarbono1 == qtdCarbono2){
+            mostraMensagem("Os elementos são parecidos!");
+        } else {
+            mostraMensagem("Os elementos são diferentes!");
+        }
+
+    </script>
+</body>
+</html>

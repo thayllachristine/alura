@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula - CNH</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        let idade = parseInt(prompt("Qual é a sua idade?"));
+        var temCNH = prompt("Tem CNH? Responda S ou N");
+
+        if (idade >= 18 && temCNH == "S"){
+            mostraMensagem("Você pode dirigir!");
+        } else {       
+            mostraMensagem("Você não tem permissão para dirigir!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 6 - Jogo de Adivinhação</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        var numeroPensado = Math.round(Math.random() * 10);
+        var chute = parseInt(prompt("Digite seu chute!"));
+
+        console.log(numeroPensado);
+
+        if(chute == numeroPensado){
+            mostraMensagem("Você acertou");
+        } else {
+            mostraMensagem("Você errou, o número pensado foi: " + numeroPensado);
+        }
+    </script>
+</body>
+</html>

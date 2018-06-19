@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 6 - Melhorando o programa de IMC</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        function calculaIMC(altura, peso) {
+            return imc = peso / (altura * altura);
+        }
+        
+        let nome = prompt("Informe seu nome: ");
+        var alturaInformada = prompt(nome + ", informe sua altura: ");
+        var pesoInformado = prompt(nome + ", informe seu peso: ");
+
+        var imc = calculaIMC(alturaInformada, pesoInformado);
+
+        mostraMensagem(nome + ", o seu IMC é: " + imc);
+
+        if(imc < 18.5){
+            mostraMensagem("Você está abaixo do recomendado!");
+        } else if(imc > 18.5 && imc <35){
+            mostraMensagem("Você está dentro da média!");
+        } else {
+            mostraMensagem("Você está acima do recomendado!");
+        }
+
+     
+        // 18.5 abaixo 
+        // 18. 5 e 35 media 
+        // > 35 
+
+    
+
+
+
+    </script>
+</body>
+</html>
