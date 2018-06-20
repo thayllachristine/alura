@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 7 - Números Pares</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>")
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem)
+            //pulaLinha()
+        }
+
+        let numero = 0;
+
+        mostraMensagem("<h3> Números pares </h3>")
+    
+        while(numero <= 100){
+            mostraMensagem(numero + " - ")
+            numero = numero + 2;
+        }
+
+        mostraMensagem("<br><br>FIM!");
+    </script>
+</body>
+</html>

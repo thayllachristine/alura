@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 7 - Tabuada</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>")
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem)
+            pulaLinha()
+        }
+
+        var numeroTab = parseInt(prompt("Insira um número: "));
+
+        mostraMensagem("Tabuada do " + numeroTab);
+    
+        for(var multiplicador =1; multiplicador <=10; multiplicador++){
+            var totalTab = numeroTab * multiplicador;
+            mostraMensagem(numeroTab + " x " + multiplicador + " = " + totalTab)
+        }
+
+        mostraMensagem("<br> FIM!");
+    </script>
+</body>
+</html>
