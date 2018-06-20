@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 7 - Copa Francisco</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>")
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem)
+            pulaLinha()
+        }
+    
+        let anoCopa= 1930;
+        let anoLimite = parseInt(prompt("Qual é o ano limite?"));
+
+        while(anoCopa <= anoLimite){
+            mostraMensagem("Em " + anoCopa + " tem copa!")
+            anoCopa = anoCopa + 4;
+        }
+
+        mostraMensagem("<br> Ufa! Esses foram os anos de copa até " + anoLimite + "!");
+    </script>
+</body>
+</html>

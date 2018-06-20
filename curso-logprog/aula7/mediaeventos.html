@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 7 - Média Eventos</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>")
+        }
+
+        function mostraMensagem(mensagem) {
+            document.write(mensagem)
+            pulaLinha()
+        }
+
+        var totalEventos = parseInt(prompt("Informe a quantidade de eventos/mês"));
+
+        var contador = 1;
+        var totalGastoEventos = 0;
+
+        while (contador <= totalEventos) {
+            var gasto = parseInt(prompt("Informe o valor gasto no evento"));
+            totalGastoEventos = totalGastoEventos + gasto;
+            contador++;
+        }
+
+        var mediaGastoEventos = totalGastoEventos/totalEventos;
+
+        mostraMensagem("A média de gastos é: " + mediaGastoEventos)
+        mostraMensagem("Fim!")
+
+        
+    </script>
+</body>
+</html>
