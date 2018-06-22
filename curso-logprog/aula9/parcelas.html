@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 9 - Parcelas/Crédito</title>
+</head>
+<body>
+    <script>
+        var parcelas = [10.40, 40.00, 100.18, 200];
+
+        function mostraMensagem(mensagem){
+            document.write(mensagem)
+        }
+
+        for(var posicao = 0; posicao < parcelas.length; posicao++) {
+            mostraMensagem(parcelas[posicao] + " - ");
+            
+        }
+
+        mostraMensagem("<br>FIM");
+    </script>
+</body>
+</html>

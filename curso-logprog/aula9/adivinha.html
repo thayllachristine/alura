@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 9 - Adivinha mais</title>
+</head>
+<body>
+    <input/>
+    <button>Compare com o meu segredo</button>
+    <script>
+        //5,7,10,2,3
+
+        function sorteia() {
+            return Math.round(Math.random() * 10);
+        }
+        
+        function sorteiaNumeros(quantidade) {
+            var segredos = [];
+            var numero = 1
+            
+            while(numero <= quantidade){
+                
+                var numeroAleatorio = sorteia();
+                
+                if(numeroAleatorio != 0){
+                    var achou = false;
+                
+                    for (var posicao = 0; posicao < segredos.length; posicao++){
+                        if(segredos[posicao] == numeroAleatorio){
+                            achou = true;
+                            break;
+                    }
+                }
+
+                    if (achou == false){
+                        segredos.push(numeroAleatorio);
+                        numero++;
+                    }
+                }             
+            }
+
+            return segredos;
+        }
+
+        var segredos = sorteiaNumeros(5);
+
+        console.log(segredos)
+
+        var input = document.querySelector("input");
+        
+        input.focus();
+
+        function verifica() {
+            var achou =  false;
+            for (let posicao = 0; posicao < segredos.length; posicao++) {
+                if(input.value == segredos[posicao]){
+                    alert("Você ACERTOU!");
+                    achou = true;
+                    break;
+                } 
+            }
+
+            if (achou == false) {
+                alert("Você ERROU!");
+            }       
+                input.value = ""; //para limpar o que foi inserido
+                input.focus(); //tá focando
+
+            }    
+        
+
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+
+    </script>
+</body>
+</html>
