@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="src/style/style.css">
+
+    <title>JavaScript: Aparecida Nutrição</title>
+</head>
+
+<body>
+    <header>
+        <div class="head container">
+            <h1 class="head__title">Aparecida Nutrição</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Meus pacientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Peso(kg)</th>
+                        <th>Altura(m) </th>
+                        <th>Gordura Corporal (%)</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody id="tablePatients">
+                    <tr class="patient" id="firstPatient">
+                        <td class="patient__name">Paulo</td>
+                        <td class="patient__weight">100</td>
+                        <td class="patient__heigth">2.00</td>
+                        <td class="patient__fat">10</td>
+                        <td class="patient__imc">0</td>
+                    </tr>
+
+                    <tr class="patient">>
+                        <td class="patient__name">João</td>
+                        <td class="patient__weight">80</td>
+                        <td class="patient__heigth">1.72</td>
+                        <td class="patient__fat">40</td>
+                        <td class="patient__imc">0</td>
+                    </tr>
+
+                    <tr class="patient">
+                        <td class="patient__name">Erica</td>
+                        <td class="patient__weight">54</td>
+                        <td class="patient__heigth">1.64</td>
+                        <td class="patient__fat">14</td>
+                        <td class="patient__imc">0</td>
+                    </tr>
+
+                    <tr class="patient">
+                        <td class="patient__name">Douglas</td>
+                        <td class="patient__weight">85</td>
+                        <td class="patient__heigth">1.73</td>
+                        <td class="patient__fat">24</td>
+                        <td class="patient__imc">0</td>
+                    </tr>
+
+                    <tr class="patient">
+                        <td class="patient__name">Tatiana</td>
+                        <td class="patient__weight">46</td>
+                        <td class="patient__heigth">1.55</td>
+                        <td class="patient__fat">19</td>
+                        <td class="patient__imc">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
